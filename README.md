@@ -2,45 +2,73 @@
 
 # @colornia
 
-**Embedded Systems · Robotics · AI Agents · Engineering Evaluation**
+**Mechanical systems, embedded intelligence, and AI agents.**
+
+I build testable systems that connect model reasoning with code, simulation, and real engineering constraints.
 
 [![GitHub](https://img.shields.io/badge/GitHub-colornia-181717?style=flat-square&logo=github)](https://github.com/colornia)
 
 </div>
 
+---
+
 ## About
 
-I build systems at the boundary of embedded engineering and AI. My work focuses on turning open-ended ideas into testable systems: decomposing tasks, implementing reliable control or agent workflows, designing verification procedures, and tracing failure cases back to concrete causes.
+I work across mechanical engineering, embedded systems, and AI. I am interested in problems where an intelligent system must do more than produce a plausible answer: it must understand constraints, take actions, recover from failure, and leave behind evidence that can be checked.
 
-I prefer work that ends with something measurable—a reproducible test, a reviewable data diff, or a system that can be evaluated under real constraints.
+My preferred workflow is simple: decompose the problem, build the smallest testable system, verify it under real constraints, and trace failure cases back to concrete causes.
 
-## Selected work
+## What I Build
+
+```text
+Intelligent Machines
+├── Mechanism and motion analysis
+├── Embedded control and sensing
+└── Hardware-oriented verification
+
+AI Agent Systems
+├── Task planning and tool execution
+├── State, memory, and interruption handling
+└── Human-agent interaction in open environments
+
+Engineering Evaluation
+├── Reproducible test cases and evidence chains
+├── Automated verification with human-review boundaries
+└── Failure-case analysis under explicit constraints
+```
+
+## Featured Projects
 
 ### [OpenSquad](https://github.com/colornia/opensquad) · An AI teammate inside Minecraft
 
-A practical agent that joins a Minecraft server as another player and works through in-game chat. It can follow a player, gather and deliver resources, fight nearby hostile mobs, and keep user-controlled local memory. Open-ended chat can use an external model, while the basic mode works without an API key.
+OpenSquad turns an AI agent into a teammate that joins a Minecraft server as another player and works through in-game chat. It can follow a player, gather and deliver resources, fight nearby hostile mobs, and maintain user-controlled local memory. Open-ended chat can use an external model, while the basic mode works without an API key.
 
-- Built explicit action flows, interruption handling, local memory, setup diagnostics, and bilingual documentation.
-- Automated checks cover server entry, chat, collection, item delivery, and combat-related state transitions.
-- Designed privacy boundaries so ordinary chat is not stored and saved memories can be deleted by the player.
+The project is organized around explicit action flows rather than unrestricted text generation. It includes interruption handling, setup diagnostics, bilingual documentation, and automated checks for server entry, chat, collection, item delivery, and combat-related state transitions. Privacy boundaries are part of the design: ordinary chat is not stored, and saved memories can be deleted by the player.
 
-### [VulnGym contributions](https://github.com/Tencent/VulnGym) · Agent evaluation and security data
+### [VulnGym Contributions](https://github.com/Tencent/VulnGym) · Evaluation data for security agents
 
-Contributed to Tencent's real-world benchmark for white-box vulnerability-hunting agents.
+Contributions to Tencent's real-world benchmark for white-box vulnerability-hunting agents, with an emphasis on verifiable data rather than unreviewable model conclusions.
 
-- [PR #36](https://github.com/Tencent/VulnGym/pull/36): validated **408 entries / 2,889 annotation nodes** against upstream source, delivered **13 automatic fixes** and **26 human-review cases** with evidence links.
-- [PR #62](https://github.com/Tencent/VulnGym/pull/62): separated configuration vulnerabilities into static-missing and active-bypass cases; delivered an idempotent generator and an independent verifier with **6 checks**.
-- Focused on reproducible evidence chains instead of unreviewable model conclusions.
+- [PR #36](https://github.com/Tencent/VulnGym/pull/36) validated **408 entries / 2,889 annotation nodes** against upstream source, producing **13 automatic fixes** and **26 human-review cases** with evidence links.
+- [PR #62](https://github.com/Tencent/VulnGym/pull/62) separated configuration vulnerabilities into static-missing and active-bypass cases, with an idempotent generator and an independent verifier covering **6 checks**.
 
-### CVRP neural solver · Learning-based combinatorial optimization
+Together, these contributions reflect the evaluation workflow I care about: define the task precisely, preserve the evidence chain, automate what can be checked, and expose uncertain cases for review.
 
-Built an Attention Encoder–Decoder with POMO multi-start rollout in PyTorch.
+## More Projects
 
-- Trained under a **4 GB GPU-memory constraint** with mixed precision and batch-size tuning.
-- Reached **100% feasible solutions on 1,500 test instances**.
-- Achieved roughly **200× the inference speed of OR-Tools** with an average cost gap of about **+1.15%**.
+| Project | Focus | Result |
+| --- | --- | --- |
+| **CVRP Neural Solver** | Attention Encoder–Decoder with POMO multi-start rollout in PyTorch | **100% feasible solutions** on 1,500 test instances; about **200× OR-Tools inference speed** with an average cost gap of approximately **+1.15%** |
+| **Embedded and Robotic Systems** | STM32/Arduino control, sensing, communication, mechanism design, and hardware-in-the-loop debugging | Engineering practice centered on measurable behavior, fault handling, and iterative verification |
 
-## Engineering stack
+## Current Focus
+
+- Extending OpenSquad from individual task execution toward clearer role separation and multi-agent coordination.
+- Exploring agent workflows that connect language-model reasoning with code, simulation, logs, and physical constraints.
+- Designing engineering evaluation tasks with reproducible inputs, automated checks, and explicit failure-case taxonomies.
+- Building systems whose behavior can be inspected and improved, rather than judged only by the fluency of their output.
+
+## Tech Stack
 
 <p>
   <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" alt="C">
@@ -52,13 +80,18 @@ Built an Attention Encoder–Decoder with POMO multi-start rollout in PyTorch.
   <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
   <img src="https://img.shields.io/badge/SolidWorks-D32F2F?style=flat-square" alt="SolidWorks">
-  <img src="https://img.shields.io/badge/AI%20Coding%20Agents-5B5FC7?style=flat-square" alt="AI Coding Agents">
 </p>
 
-- **Embedded and control:** STM32, PWM, ADC/DMA, UART, watchdogs, PCB design, hardware-in-the-loop debugging.
-- **AI and optimization:** PyTorch, attention models, reinforcement learning, agent workflows, evaluation design.
-- **Mechanical engineering:** mechanism design, motion analysis, and SolidWorks.
+**Embedded and control:** STM32, PWM, ADC/DMA, UART, watchdogs, PCB design, and hardware-in-the-loop debugging  
+**AI and optimization:** PyTorch, attention models, reinforcement learning, agent workflows, and evaluation design  
+**Mechanical engineering:** mechanism design, motion analysis, and SolidWorks
 
-## Direction
+---
 
-I am especially interested in engineering and research roles where AI must interact with code, hardware, or a measurable workflow—particularly robotics, embedded systems, intelligent machines, and agent evaluation.
+<div align="center">
+
+**Build systems that can be tested. Make failures explainable.**
+
+<sub>Intelligent Machines · AI Agents · Engineering Evaluation</sub>
+
+</div>
